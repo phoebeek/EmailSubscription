@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Subscription" sap:VirtualizedContainerService.HintSize="1214.4,8737.6" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:e="clr-namespace:Explora_Demo_Libaray;assembly=Explora_Demo Libaray" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:r="clr-namespace:RPAProjectDemo_AuditLog;assembly=RPAProjectDemo_AuditLog" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System" xmlns:ug="clr-namespace:UiPath.GSuite;assembly=UiPath.GSuite" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Subscription" sap:VirtualizedContainerService.HintSize="1214.4,8637.6" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:e="clr-namespace:Explora_Demo_Libaray;assembly=Explora_Demo Libaray" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:r="clr-namespace:RPAProjectDemo_AuditLog;assembly=RPAProjectDemo_AuditLog" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:snm="clr-namespace:System.Net.Mail;assembly=System" xmlns:ug="clr-namespace:UiPath.GSuite;assembly=UiPath.GSuite" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="52">
       <x:String>System.Activities</x:String>
@@ -104,7 +104,7 @@
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="1224.8,8572.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
+  <Sequence sap:VirtualizedContainerService.HintSize="1224.8,8472.8" sap2010:WorkflowViewState.IdRef="Sequence_5">
     <Sequence.Variables>
       <Variable x:TypeArguments="s:String[]" Name="emailAddArr" />
       <Variable x:TypeArguments="x:String" Name="emailAddList" />
@@ -224,7 +224,7 @@
         <r:InsertLog sap:VirtualizedContainerService.HintSize="200,22.4" sap2010:WorkflowViewState.IdRef="InsertLog_17" dns_name="AWS Explora RPA - Revenue Mgmt" eventID="[event_id]" message="Completed Scrapping to datatable" processID="EmailForm" status="Complete" />
       </TryCatch.Finally>
     </TryCatch>
-    <If Condition="[emailFormDT.Rows.Count &gt; 0]" sap:VirtualizedContainerService.HintSize="1183.2,8200" sap2010:WorkflowViewState.IdRef="If_14">
+    <If Condition="[emailFormDT.Rows.Count &gt; 0]" sap:VirtualizedContainerService.HintSize="1183.2,8100" sap2010:WorkflowViewState.IdRef="If_14">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -232,7 +232,7 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <If.Then>
-        <Sequence sap:VirtualizedContainerService.HintSize="1039.2,8050.4" sap2010:WorkflowViewState.IdRef="Sequence_142">
+        <Sequence sap:VirtualizedContainerService.HintSize="1039.2,7950.4" sap2010:WorkflowViewState.IdRef="Sequence_142">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -311,13 +311,13 @@
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
           </ui:InterruptibleWhile>
-          <ui:ForEachRow CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="find the email name in the Database &#xA;If already Exist" DataTable="[emailFormDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="997.6,7547.2" sap2010:WorkflowViewState.IdRef="ForEachRow_6">
+          <ui:ForEachRow CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="find the email name in the Database &#xA;If already Exist" DataTable="[emailFormDT]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="997.6,7447.2" sap2010:WorkflowViewState.IdRef="ForEachRow_6">
             <ui:ForEachRow.Body>
               <ActivityAction x:TypeArguments="sd:DataRow">
                 <ActivityAction.Argument>
                   <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                 </ActivityAction.Argument>
-                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="948,7354.4" sap2010:WorkflowViewState.IdRef="Sequence_98">
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="948,7254.4" sap2010:WorkflowViewState.IdRef="Sequence_98">
                   <Sequence.Variables>
                     <Variable x:TypeArguments="sd:DataTable" Name="dtSubscriptionList" />
                   </Sequence.Variables>
@@ -364,15 +364,15 @@
                     </If.Else>
                   </If>
                   <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="906.4,62.4" sap2010:WorkflowViewState.IdRef="WriteLine_17" Text="[stockName]" />
-                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="906.4,5427.2" sap2010:WorkflowViewState.IdRef="TryCatch_3">
+                  <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="906.4,5327.2" sap2010:WorkflowViewState.IdRef="TryCatch_3">
                     <TryCatch.Try>
-                      <ui:OpenApplication ApplicationWindow="{x:Null}" Arguments="{x:Null}" TimeoutMS="{x:Null}" WorkingDirectory="{x:Null}" sap2010:Annotation.AnnotationText="open power bi&#xA;select specifc stockName " DisplayName="Open Application 'PBIDesktop.exe stockDas...'" FileName="C:\Program Files\Microsoft Power BI Desktop\bin\PBIDesktop.exe" sap:VirtualizedContainerService.HintSize="869.6,5196" sap2010:WorkflowViewState.IdRef="OpenApplication_3" InformativeScreenshot="458073bd7ea59e2b4ab195140d715247" Selector="&lt;wnd app='pbidesktop.exe' ctrlname='MainWindow' /&gt;">
+                      <ui:OpenApplication ApplicationWindow="{x:Null}" Arguments="{x:Null}" TimeoutMS="{x:Null}" WorkingDirectory="{x:Null}" sap2010:Annotation.AnnotationText="open power bi&#xA;select specifc stockName " DisplayName="Open Application 'PBIDesktop.exe stockDas...'" FileName="C:\Program Files\Microsoft Power BI Desktop\bin\PBIDesktop.exe" sap:VirtualizedContainerService.HintSize="869.6,5096" sap2010:WorkflowViewState.IdRef="OpenApplication_3" InformativeScreenshot="458073bd7ea59e2b4ab195140d715247" Selector="&lt;wnd app='pbidesktop.exe' ctrlname='MainWindow' /&gt;">
                         <ui:OpenApplication.Body>
                           <ActivityAction x:TypeArguments="x:Object">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                             </ActivityAction.Argument>
-                            <Sequence sap:VirtualizedContainerService.HintSize="836,5004.8" sap2010:WorkflowViewState.IdRef="Sequence_124">
+                            <Sequence sap:VirtualizedContainerService.HintSize="836,4904.8" sap2010:WorkflowViewState.IdRef="Sequence_124">
                               <Sequence.Variables>
                                 <Variable x:TypeArguments="s:String[]" Name="filePath" />
                                 <Variable x:TypeArguments="x:String" Name="fileName" />
@@ -915,7 +915,6 @@
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:CommentOut>
-                              <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="794.4,60" sap2010:WorkflowViewState.IdRef="MessageBox_6" Text="[Row.item(0).ToString+ Row.item(0).ToString.Contains(&quot;@outlook.com&quot;).ToString]" />
                               <If Condition="[Row.item(0).ToString.Contains(&quot;@outlook.com&quot;) OR  Row.item(0).ToString.Contains(&quot;@explora.consulting&quot;)]" sap:VirtualizedContainerService.HintSize="794.4,209.6" sap2010:WorkflowViewState.IdRef="If_15">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -1165,7 +1164,7 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:SendMail MailMessage="{x:Null}" TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="send the selected stock dashboard snapshot to subscriber" Bcc="tom77782@gmail.com, rpa.explora@gmail.com" Body="[strImageBody]" Cc="thomas_cheng@explora.consulting" DisplayName="Send SMTP Mail Message" Email="[email]" EnableSSL="True" From="[email]" sap:VirtualizedContainerService.HintSize="333.6,190.4" sap2010:WorkflowViewState.IdRef="SendMail_2" IsBodyHtml="True" Name="[emailName]" Password="[password]" Port="[stmp_port]" SecureConnection="Auto" Server="[server]" Subject="Latest Stock Index Dashboard" To="[row.item(0).ToString]">
+                        <ui:SendMail Cc="{x:Null}" MailMessage="{x:Null}" TimeoutMS="{x:Null}" sap2010:Annotation.AnnotationText="send the selected stock dashboard snapshot to subscriber" Bcc="rpa.explora@gmail.com" Body="[strImageBody]" DisplayName="Send SMTP Mail Message" Email="[email]" EnableSSL="True" From="[email]" sap:VirtualizedContainerService.HintSize="333.6,190.4" sap2010:WorkflowViewState.IdRef="SendMail_2" IsBodyHtml="True" Name="[emailName]" Password="[password]" Port="[stmp_port]" SecureConnection="Auto" Server="[server]" Subject="Latest Stock Index Dashboard" To="[row.item(0).ToString]">
                           <ui:SendMail.Files>
                             <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
                               <InArgument x:TypeArguments="x:String">D:\Download\EmailSubscription-master\EmailSubscription-master\power bi files\stockDashboard.pdf</InArgument>
