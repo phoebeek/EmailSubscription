@@ -893,7 +893,7 @@
                                   <OutArgument x:TypeArguments="x:String">[strImgGmail]</OutArgument>
                                 </Assign.To>
                                 <Assign.Value>
-                                  <InArgument x:TypeArguments="x:String" xml:space="preserve">["&lt;img src= '"+ strImgtextlink + "'  alt = 'dashboard' width = '350' height = '200'  /&gt;"]</InArgument>
+                                  <InArgument x:TypeArguments="x:String" xml:space="preserve">["&lt;img src= "+ strImgtextlink + "  alt = 'dashboard' width = '350' height = '200'  /&gt;"]</InArgument>
                                 </Assign.Value>
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -996,7 +996,7 @@
                                       <OutArgument x:TypeArguments="x:String">[strImageBody]</OutArgument>
                                     </Assign.To>
                                     <Assign.Value>
-                                      <InArgument x:TypeArguments="x:String">["&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;body&gt;Hi there,&lt;br&gt;Thank you for your subscription. Here is the stock market trend dashboard report for your information.&lt;br&gt;'"+strImgGmail+"'&lt;/body&gt;&lt;/html&gt;&lt;br&gt;&lt;br&gt;--&lt;br&gt; Kind Regards, &lt;br&gt; Robot "]</InArgument>
+                                      <InArgument x:TypeArguments="x:String">["&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;body&gt;Hi there,&lt;br&gt;Thank you for your subscription. Here is the stock market trend dashboard report for your information.&lt;br&gt;"+strImgGmail+"&lt;/body&gt;&lt;/html&gt;&lt;br&gt;&lt;br&gt;--&lt;br&gt; Kind Regards, &lt;br&gt; Robot "]</InArgument>
                                     </Assign.Value>
                                   </Assign>
                                 </If.Else>
